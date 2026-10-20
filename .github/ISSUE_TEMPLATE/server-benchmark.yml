@@ -1,0 +1,65 @@
+name: Server benchmark
+description: Send in your server's results from the Server Tester or the NukeStats plugin's server test.
+title: "Benchmark: <CPU> on <own PC or provider>"
+labels: ["benchmark"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sending one in. Run the test on the benchmarks page first (benchmarks/README.md, "Send in your results"), then fill this in and drag your results.json into the box at the bottom.
+  - type: dropdown
+    id: host
+    attributes:
+      label: Where does the server run?
+      options:
+        - My own PC
+        - A rented game server (game server provider)
+        - A rented VPS or dedicated machine
+    validations:
+      required: true
+  - type: input
+    id: provider
+    attributes:
+      label: Provider and plan (rented only)
+      description: The company, the plan and the CPU limit it gives you, like "Example Host, 4 GB plan, 300% CPU".
+  - type: input
+    id: cpu
+    attributes:
+      label: CPU
+      description: The model the test shows, like "AMD Ryzen 7 5800X".
+    validations:
+      required: true
+  - type: input
+    id: ram
+    attributes:
+      label: RAM
+      description: Size and speed if you know it, like "32 GB DDR5-6000, two sticks".
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: Like "Windows 11" or "Debian 12".
+    validations:
+      required: true
+  - type: dropdown
+    id: test
+    attributes:
+      label: Which test did you run?
+      options:
+        - The Server Tester (own PC)
+        - The NukeStats plugin's server test (rented server)
+        - Something else (say what below)
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else that was running, or that you changed
+      description: Other programs, a game server sharing the machine, the power plan or any overclock.
+  - type: textarea
+    id: results
+    attributes:
+      label: results.json
+      description: Drag the results.json from the test's results folder in here. It has no names or Steam IDs, just the machine and the measurements.
+    validations:
+      required: true
