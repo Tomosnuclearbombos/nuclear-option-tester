@@ -2,7 +2,7 @@
 
 The Server Tester runs a private copy of the Nuclear Option dedicated server through a stress test and tells you which settings run it best on your machine. It works on Windows and Linux, and on a rented server the NukeStats plugin runs the same test itself.
 
-**Download:** [the releases](https://github.com/Tomosnuclearbombos/nuclear-option-tester/releases)
+**Download:** [the releases](https://github.com/Tomosnuclearbombos/nuclear-option-tester/releases) · **Source code:** [the tester](https://github.com/Tomosnuclearbombos/nuclear-option-toolkit/tree/v1.9.12/src/ServerTester) and [the NukeStats plugin](https://github.com/Tomosnuclearbombos/nuclear-option-toolkit/tree/v1.9.12/src/NukeStats) in the toolkit repo
 
 During my attempts to optimise the server, I wanted to get more juice out of it whilst touching the engine as little as possible. No matter how light or heavy the server was running, nothing was able to hold 60 Hz, even at light settings. Speeding up or slowing down the engine was out of the question given the knock-on effects, so with some adjustments to how the server uses the CPU, and extensive testing, I created tests and tuning that get the server running much faster.
 
